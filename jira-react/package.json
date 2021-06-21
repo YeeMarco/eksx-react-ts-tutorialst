@@ -22,7 +22,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install",
     "api-serve": "npx nodemon ./serve/index.js",
     "json-server": "json-server --watch .json-server/db.json --middlewares .json-server/middlewares.js --port 3004"
   },
@@ -46,12 +45,8 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
     "autoprefixer": "^10.2.6",
     "eslint-config-prettier": "^8.3.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "prettier": "2.3.1",
