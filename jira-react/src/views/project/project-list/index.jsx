@@ -4,20 +4,26 @@ export const  ProjectList = (props)=>{
     return (
         <>
             <div>ProjectList</div>
-            {project_list.map((project)=>{
+            <table>
+                <th></th>
+                <tbody>
+                {project_list.map((project)=>{
                 return (
-                    <div className="flex flex-row" key={project.id}>
+                    <tr  key={project.id}>
                       {  
                         Object.keys(project).map((key)=>{
                             return (
-                                <span key={key}>{project[key]}</span>
+                                <td key={key}>{project[key]}</td>
                             )
                         })
                         }
                         
-                    </div>
+                    </tr>
                 )
             })}
+                </tbody>
+            </table>
+            
         </>
     )
 }
