@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import "tailwindcss/tailwind.css"
+// import "./style/tailwind.css";
+// import App from "./App";
+import {Project} from "./views/project";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Project />
   </React.StrictMode>,
   document.getElementById("root")
 );
