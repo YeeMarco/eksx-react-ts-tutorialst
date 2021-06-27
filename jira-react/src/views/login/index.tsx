@@ -1,4 +1,5 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useContext } from "react";
+import {ThemeContext} from '../../context/App/App.context'
 import style from "./style.module.scss";
 interface ILoginInfo {
   userName: string;
@@ -39,7 +40,9 @@ const reducer = (prevState: ILoginInfo, action: ACTIONTYPE) => {
 
 export const Login: React.FC = () => {
   let [type, setType] = useState<boolean>(true);
-
+  let app = useContext(ThemeContext)
+  console.log(app);
+  
   let [loginInfo, dispatchLoginInfo] = useReducer(reducer, {
     userName: "",
     password: "",
@@ -59,6 +62,7 @@ export const Login: React.FC = () => {
   };
   return (
     <div className={style.loginpage}>
+      <div onClick={app.toggleTheme}>context</div>
       <div className={style.formstructor}>
         <div className={`${style.signup} ${type ? style.slideup : ""} `}>
           <h2 className={style.formtitle} id="signup" onClick={toggleType}>
