@@ -6,8 +6,9 @@ interface ILoginInfo {
   password: string;
   email?: string;
 }
+// 类型别名 区别 type 1.可以联合类型 2.utility type  (Partail Omit)
 type ACTIONTYPE =
-  | { type: "userName"; payload: string }
+  { type: "userName"; payload: string }
   | { type: "password"; payload: string }
   | { type: "email"; payload: string };
 
