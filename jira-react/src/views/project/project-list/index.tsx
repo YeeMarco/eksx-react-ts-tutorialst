@@ -9,13 +9,25 @@ export const ProjectList:React.FC<IProjectListProps>= (props) => {
   let { project_list} = props;
   const columns = [
     {
-
+      title: 'project name',
+      dataIndex: 'project_name',
+      key: 'project_name',
     },{
-      
-    }
+      title: 'owner',
+      dataIndex: 'owner',
+      key: 'owner',
+    },{
+      title: 'creact time',
+      dataIndex: 'creactTime',
+      key: 'creactTime',
+    },{
+      title: 'info',
+      dataIndex: 'info',
+      key: 'info',
+    },
   ]
   return (
-    <Table columns={columns} dataSource={project_list} />
+    <Table columns={columns} dataSource={project_list}  rowKey="id"/>
   )
 }
 
